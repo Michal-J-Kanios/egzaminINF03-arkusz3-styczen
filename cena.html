@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malarz</title>
+    <link rel="stylesheet" href="styl_1.css">
+</head>
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+<section id="flexy">
+    <section id="lewy">
+        <h2>Menu</h2>
+        <ul>
+            <li>
+                <a href="mieszamy.html">Mieszamy</a>
+            </li>
+            <li>
+                <a href="cena.html">Wyceniamy</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="srodek">
+        <h2>Zapotrzebowanie na farbę</h2>
+        Powierzchnia malowania (m²):<input type="number" name="number" id="numerek">
+        <input type="button" value="Policz" onclick="zapotrzebowanie()">
+        <p id="wynik"></p>
+
+        <script>
+
+            function zapotrzebowanie(){
+                let powierzchnia = +document.getElementById('numerek').value
+                let wynik = document.getElementById('wynik')
+                wynik.innerHTML = "Liczba potrzebnych puszek: " + Math.abs(Math.ceil(powierzchnia / 4))
+            }
+        </script>
+    </section>
+
+    <section id="prawy">
+        <img src="obraz.png" alt="Próbki farb">
+    </section>
+</section>
+    <footer>
+        <h3>MALARZ</h3>
+        <p>Stronę opracował: 000000000000</p>
+    </footer>
+
+</body>
+</html>
